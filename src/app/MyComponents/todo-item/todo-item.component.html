@@ -1,0 +1,12 @@
+<div class="my-3">
+    <div class="text-{{mode}}">
+        <h5>{{todo.sno}}: {{todo.title}}</h5>{{todo.desc}}
+        <div class="my-1 custom-switch text-dark">
+            <input type="checkbox" (click)="onChecked(todo)" [checked]="todo.active" class="form-click-input" id="markRead"/>
+            <span>{{" "}}</span>
+            <label class="text-{{mode}}" html="customSwitch1">Mark as done</label>
+            <span>{{" "}}</span>
+            <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+        </div>
+    </div>
+</div>

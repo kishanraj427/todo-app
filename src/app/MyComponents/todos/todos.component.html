@@ -1,0 +1,7 @@
+
+<app-add-todo [mode]="mode" (addNewTodo)="addTodo($event)"></app-add-todo>
+<h5 class="text-{{mode}}">Your Todo List: </h5>
+<div *ngIf="todos.length === 0" class="text-{{mode}}"><p>No todo list yet.</p></div>
+<div *ngFor="let todo of todos">
+    <app-todo-item [todo]="todo" [mode]="mode" (todoChange)="changeTodo($event)" (todoDelete)="deleteTodo($event)"></app-todo-item>
+</div>

@@ -1,0 +1,15 @@
+<form>
+    <div class="form-group">
+      <label for="title" class="text-{{mode}}">Todo Title</label>
+      <input type="text" [(ngModel)]="title" [ngStyle]="{'background-color':mode==='light'?'grey':'white'}" name="title" class="form-control" id="title">
+    </div>
+    <div class="form-group">
+      <label for="desc" class="text-{{mode}}">Todo Description</label>
+      <input type="text" class="form-control" [ngStyle]="{'background-color':mode==='light'?'grey':'white'}" name="desc" [(ngModel)]="desc" id="desc">
+    </div>
+    <div class="my-3">
+      <button type="submit" (click)="onSubmit()" class="btn btn-primary">Add Todo</button>
+      {{"      "}}
+      <button type="submit" (click)="clearText()" class="btn btn-primary">Clear Text</button>
+    </div>
+</form>
