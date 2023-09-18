@@ -1,4 +1,4 @@
-name: Angular CI/CD
+name: Todo-Task
 'on':
   push:
     branches:
