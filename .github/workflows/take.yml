@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build application
-        run: ng build --prod
+        run: ng build 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
